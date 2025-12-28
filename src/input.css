@@ -1,6 +1,12 @@
 @import "tailwindcss";
 
 @theme {
+    --animate-float: float 3s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+  }
   /* Change the "indigo" color to a custom brand purple */
   --color-indigo-600: #7c3aed;
   --color-indigo-700: #6d28d9;

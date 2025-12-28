@@ -66,8 +66,14 @@
                 </div>
     
                 <div class="w-full lg:w-1/2">
-                    <div class="aspect-video w-full rounded-2xl bg-gradient-to-br from-indigo-100 to-slate-200 shadow-inner flex items-center justify-center border-2 border-dashed border-slate-300">
-                        <p class="text-slate-400 font-medium italic">Your Image or App Screenshot Here</p>
+                    <div class="relative aspect-video w-full overflow-hidden rounded-2xl shadow-2xl animate-float">
+                        <img 
+                            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" 
+                            alt="Coding on a laptop" 
+                            class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                            loading="eager"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
                     </div>
                 </div>
     
