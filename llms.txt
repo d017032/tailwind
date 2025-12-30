@@ -1,0 +1,27 @@
+# [Project Name] Website Template
+
+> A modern, high-performance landing page template built with HTML5 and Tailwind CSS v4.
+
+## Key Information for AI Agents
+- **Primary Styles:** Found in `src/input.css` under the `@theme` directive.
+- **Brand Colors:** Edit `--color-brand-primary` and `--color-brand-secondary` to retheme the entire site.
+- **Content:** The main content is located in `index.html`.
+- **Images:** Use descriptive paths in `assets/` or high-quality Unsplash placeholders.
+
+# Project: Static Gig Template
+This is a 2-page Tailwind v4 template (index.html, about.html).
+
+## Branding Logic:
+- Global colors are in src/input.css (@theme block).
+- Main text color is 'text-copy'.
+- Main brand color is 'text-primary'.
+
+## AI Editing Rules:
+1. To rebrand: Only edit the @theme variables in src/input.css.
+2. To add content: Locate tags starting with and replace the placeholder text within.
+3. Legal: Update the and tags in the footer of both pages.
+
+## SECTION IDs
+- #hero: Primary landing message
+- #features: Service/Benefit grid
+- #contact-form: Lead generation area

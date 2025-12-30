@@ -1,0 +1,25 @@
+# AI Development Rules for [Client Project]
+
+## Tech Stack
+- Framework: Static HTML5 with Tailwind CSS v4.
+- Build Tool: Tailwind CLI (@tailwindcss/cli).
+
+- ## Theming Architecture
+- PRIMARY COLOR: use `text-primary` or `bg-primary`.
+- BACKGROUNDS: use `bg-surface`.
+- TEXT COLOR: use `text-copy`.
+- DO NOT use `slate`, `blue`, or `indigo` classes.
+
+## Content Editing Protocol
+- When creating a new site for a client, replace all text in `index.html` while keeping the Tailwind structure.
+- All images must be high-quality Unsplash URLs or local paths in `assets/`.
+- Ensure the "LOGO" placeholder is replaced with the client's business name.
+- 
+- ## Theming Architecture
+- PRIMARY COLOR: use `text-primary` or `bg-primary`.
+- BACKGROUNDS: use `bg-surface`.
+- TEXT COLOR: use `text-copy`.
+- DO NOT use `slate`, `blue`, or `indigo` classes.
+- 
+- - SECTION ANCHORS: Every top-level <section> must have a unique id (e.g., id="hero", id="features").
+- NAVIGATION: Use these IDs in the header links for smooth internal page navigation.

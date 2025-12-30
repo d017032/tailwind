@@ -1,182 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./dist/output.css" rel="stylesheet">
     <title>Modern Static Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="./dist/output.css" rel="stylesheet">
 </head>
-<body class="bg-slate-50 text-slate-900">
-    <nav class="bg-white border-b border-slate-200">
+<body class="bg-surface text-copy font-sans">
+    <nav class="bg-white border-b border-slate-200 fixed w-full z-50">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="flex h-16 justify-between items-center">
-            
-            <div class="flex-shrink-0 flex items-center">
-              <span class="text-2xl font-bold text-indigo-600">LOGO</span>
+            <div class="flex h-16 justify-between items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 no-underline">
+                        <span class="text-2xl font-extrabold tracking-tight text-primary font-sans">
+                            LOGO
+                        </span>
+                    </a>
+                </div>
+    
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-primary font-bold transition">Home</a>
+                    <a href="about.html" class="text-copy hover:text-primary transition font-medium">About</a>
+                    <a href="contact.html" class="text-copy hover:text-primary transition font-medium">Contact</a>
+                </div>
+    
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-copy/80 hover:text-primary focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
             </div>
-      
-            <div class="hidden md:flex space-x-8">
-              <a href="#" class="text-slate-600 hover:text-indigo-600 font-medium">Home</a>
-              <a href="#" class="text-slate-600 hover:text-indigo-600 font-medium">Features</a>
-              <a href="#" class="text-slate-600 hover:text-indigo-600 font-medium">Pricing</a>
-              <a href="#" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">Get Started</a>
-            </div>
-      
-            <div class="md:hidden flex items-center">
-              <button id="mobile-menu-button" class="text-slate-600 hover:text-indigo-600 focus:outline-none">
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
-            </div>
-          </div>
         </div>
-      
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
-          <div class="space-y-1 px-4 pt-2 pb-3">
-            <a href="#" class="block px-3 py-2 text-base font-medium text-slate-600 hover:bg-slate-50">Home</a>
-            <a href="#" class="block px-3 py-2 text-base font-medium text-slate-600 hover:bg-slate-50">Features</a>
-            <a href="#" class="block px-3 py-2 text-base font-medium text-slate-600 hover:bg-slate-50">Pricing</a>
-            <a href="#" class="block px-3 py-2 text-base font-medium text-indigo-600 font-semibold">Get Started</a>
-          </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-6 py-2 text-primary font-bold">Home</a>
+                <a href="about.html" class="block px-6 py-2 text-copy hover:bg-surface">About</a>
+                <a href="contact.html" class="block px-6 py-2 text-copy hover:bg-surface">Contact</a>
+            </div>
         </div>
-      </nav>
-    <section class="relative bg-white pb-12 pt-16 sm:pb-16 lg:pb-24 lg:pt-32">
+    </nav>
+
+    <section id="hero" class="relative bg-white pb-12 pt-16 sm:pb-16 lg:pb-24 lg:pt-32">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col items-center gap-12 lg:flex-row">
-                
                 <div class="w-full text-center lg:w-1/2 lg:text-left">
-                    <h1 class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
-                        Build something <span class="text-indigo-600">extraordinary</span> on your Chromebook.
+                    <h1 class="text-4xl font-extrabold tracking-tight text-copy sm:text-6xl">
+                        Build something <span class="text-primary">extraordinary</span> on your Chromebook.
                     </h1>
-                    <p class="mt-6 text-lg leading-8 text-slate-600">
-                        This is a mobile-first hero section built with Tailwind CSS. It's clean, fast, and fully responsive.
+                    <p class="mt-6 text-lg leading-8 text-copy/80">
+                        This is a mobile-first hero section built with Tailwind CSS and Poppins. It's clean, fast, and fully responsive.
                     </p>
                     <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
-                        <a href="#" class="w-full rounded-full bg-indigo-600 px-8 py-4 text-center text-sm font-semibold text-white shadow-lg hover:bg-indigo-500 sm:w-auto">
+                        <a href="#" class="w-full rounded-full bg-primary px-8 py-4 text-center text-sm font-semibold text-white shadow-lg hover:opacity-90 sm:w-auto transition">
                             Get Started
                         </a>
-                        <a href="#" class="text-sm font-semibold leading-6 text-slate-900">
+                        <a href="#" class="text-sm font-semibold leading-6 text-copy hover:text-primary transition">
                             View Components <span aria-hidden="true">→</span>
                         </a>
                     </div>
                 </div>
-    
                 <div class="w-full lg:w-1/2">
-                    <div class="relative aspect-video w-full overflow-hidden rounded-2xl shadow-2xl animate-float">
+                    <div class="relative aspect-video w-full overflow-hidden rounded-2xl shadow-2xl">
                         <img 
                             src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" 
                             alt="Coding on a laptop" 
                             class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                             loading="eager"
                         >
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
                     </div>
                 </div>
-    
             </div>
         </div>
     </section>
-    <section class="bg-slate-50 py-24">
+
+    <section id="features" class="bg-surface py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-16">
-            <h2 class="text-base font-semibold text-indigo-600 tracking-wide uppercase">Features</h2>
-            <p class="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Everything you need</p>
+            <h2 class="text-base font-semibold text-primary tracking-wide uppercase">Features</h2>
+            <p class="mt-2 text-3xl font-bold tracking-tight text-copy sm:text-4xl">Everything you need</p>
           </div>
-      
           <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            
             <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
-              <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
-              <h3 class="text-xl font-bold text-slate-900">Fast Performance</h3>
-              <p class="mt-2 text-slate-600">Built for speed on Chromebooks using the latest Tailwind engine.</p>
+              <h3 class="text-xl font-bold text-copy">Fast Performance</h3>
+              <p class="mt-2 text-copy/80">Built for speed on Chromebooks using the latest Tailwind engine.</p>
             </div>
-      
             <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
-              <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+              <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
-              <h3 class="text-xl font-bold text-slate-900">Mobile First</h3>
-              <p class="mt-2 text-slate-600">Designed to look great on phones, then scaled up for monitors.</p>
+              <h3 class="text-xl font-bold text-copy">Mobile First</h3>
+              <p class="mt-2 text-copy/80">Designed to look great on phones, then scaled up for monitors.</p>
             </div>
-      
             <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
-              <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+              <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
-              <h3 class="text-xl font-bold text-slate-900">Fully Customizable</h3>
-              <p class="mt-2 text-slate-600">Change your brand colors in one place and see them update everywhere.</p>
+              <h3 class="text-xl font-bold text-copy">Fully Customizable</h3>
+              <p class="mt-2 text-copy/80">Change your brand colors in one place and see them update everywhere.</p>
             </div>
-      
           </div>
         </div>
       </section>
-      <footer class="bg-slate-900 pt-16 pb-8">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          
-          <div class="grid grid-cols-2 gap-12 md:grid-cols-4 lg:grid-cols-5">
-            
-            <div class="col-span-2">
-              <span class="text-2xl font-bold text-white">LOGO</span>
-              <p class="mt-4 text-slate-400 max-w-xs">
-                Building the future of the web, one utility class at a time. Designed on a Chromebook, hosted on GitHub.
-              </p>
-              <div class="mt-6 flex gap-4">
-                  <div class="w-8 h-8 rounded-full bg-slate-800 hover:bg-indigo-600 transition cursor-pointer"></div>
-                  <div class="w-8 h-8 rounded-full bg-slate-800 hover:bg-indigo-600 transition cursor-pointer"></div>
-                  <div class="w-8 h-8 rounded-full bg-slate-800 hover:bg-indigo-600 transition cursor-pointer"></div>
-              </div>
+
+      <footer class="bg-slate-900 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-sm font-semibold text-white uppercase">Company</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="index.html" class="text-slate-400 hover:text-primary">Home</a></li>
+                        <li><a href="about.html" class="text-slate-400 hover:text-primary">About</a></li>
+                        <li><a href="contact.html" class="text-slate-400 hover:text-primary">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-      
-            <div>
-              <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Product</h3>
-              <ul class="mt-4 space-y-2">
-                <li><a href="#" class="text-slate-400 hover:text-white transition">Features</a></li>
-                <li><a href="#" class="text-slate-400 hover:text-white transition">Integrations</a></li>
-                <li><a href="#" class="text-slate-400 hover:text-white transition">Pricing</a></li>
-              </ul>
+    
+            <div class="mt-12 border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-slate-500 text-center">
+                    © 2025 <span class="text-primary">Your Brand Name</span>. All rights reserved.
+                </p>
+                
+                <p class="text-xs text-slate-600 uppercase tracking-widest font-medium">
+                    Legal Disclaimer: Licensed for use via [Your Agency Name].
+                </p>
             </div>
-      
-            <div>
-              <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Company</h3>
-              <ul class="mt-4 space-y-2">
-                <li><a href="#" class="text-slate-400 hover:text-white transition">About</a></li>
-                <li><a href="#" class="text-slate-400 hover:text-white transition">Blog</a></li>
-                <li><a href="#" class="text-slate-400 hover:text-white transition">Careers</a></li>
-              </ul>
-            </div>
-      
-            <div>
-              <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Legal</h3>
-              <ul class="mt-4 space-y-2">
-                <li><a href="#" class="text-slate-400 hover:text-white transition">Privacy</a></li>
-                <li><a href="#" class="text-slate-400 hover:text-white transition">Terms</a></li>
-              </ul>
-            </div>
-          </div>
-      
-          <div class="mt-12 border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-sm text-slate-500 text-center">
-              © 2025 Your Brand. All rights reserved.
-            </p>
-            <p class="text-xs text-slate-600 uppercase tracking-widest font-medium">
-              Built with Tailwind CSS
-            </p>
-          </div>
         </div>
-      </footer>
+    </footer>
+
     <script>
         const btn = document.getElementById('mobile-menu-button');
         const menu = document.getElementById('mobile-menu');
-      
         btn.addEventListener('click', () => {
           menu.classList.toggle('hidden');
         });
-      </script>
+    </script>
 </body>
 </html>
